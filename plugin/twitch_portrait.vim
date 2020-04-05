@@ -41,8 +41,8 @@ function CreatePortrait()
 
    terminal cmatrix -a -b -C blue
 
-   " FIXME: This isn't switching back into Normal mode????????????//??//NEHIdnswiarttoieas/nn?
-   exe "normal \<C-\>\<C-N>"
+   " TODO: Restore whichever mode the user was in
+   stopinsert
 
    if l:equalalways
       set equalalways
