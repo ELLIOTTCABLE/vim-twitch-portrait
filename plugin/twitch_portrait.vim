@@ -36,12 +36,10 @@ function CreatePortrait()
       set noequalalways
    endif
 
-   aboveleft vsplit
-   wincmd H
+   topleft 54vsplit
    setl winfixheight winfixwidth
 
    terminal cmatrix -a -b -C blue
-   exe "54wincmd |"
 
    " FIXME: This isn't switching back into Normal mode????????????//??//NEHIdnswiarttoieas/nn?
    exe "normal \<C-\>\<C-N>"
