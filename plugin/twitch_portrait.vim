@@ -3,8 +3,8 @@ if exists('g:loaded_twitch_portrait')
 endif
 let g:loaded_twitch_portrait = v:true
 
-command -nargs=0 ResetPortrait call ResetPortrait()
-command -nargs=0 CreatePortrait call CreatePortrait()
+command! -nargs=0 ResetPortrait call ResetPortrait()
+command! -nargs=0 CreatePortrait call CreatePortrait()
 
 function ResetPortrait()
    let l:win = bufwinnr('cmatrix')
