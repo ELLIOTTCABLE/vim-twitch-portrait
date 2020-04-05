@@ -11,18 +11,18 @@ function ResetPortrait()
    if -1 == l:win
       echom "ResetPortrait: Portrait-window not found, re-creating"
       call CreatePortrait()
+   else
+      let l:prev = winnr()
+      let l:view = winsaveview()
+
+      " FIXME: This will bungle the arrangement if a second, lower window is open
+      exe l:win 'wincmd w'
+      wincmd H
+      exe '54wincmd |'
+
+      exe l:prev 'wincmd w'
+      call winrestview(l:view)
    endif
-
-   let l:prev = winnr()
-   let l:view = winsaveview()
-
-   " FIXME: This will bungle the arrangement if a second, lower window is open
-   exe l:win "wincmd w"
-   wincmd H
-   exe "54wincmd |"
-
-   exe l:prev "wincmd w"
-   call winrestview(l:view)
 endfunction
 
 function CreatePortrait()
