@@ -19,6 +19,7 @@ function ResetPortrait()
       exe l:win 'wincmd w'
       wincmd H
       exe '54wincmd |'
+      setl winfixheight winfixwidth
 
       exe l:prev 'wincmd w'
       call winrestview(l:view)
