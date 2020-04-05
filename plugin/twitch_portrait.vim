@@ -48,6 +48,6 @@ function CreatePortrait()
       set equalalways
    endif
 
-   exe (l:prev + 1) "wincmd w"
+   exe (l:prev + 1) 'wincmd w'
    call winrestview(l:view)
 endfunction
