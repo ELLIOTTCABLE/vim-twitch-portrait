@@ -40,7 +40,7 @@ function CreatePortrait()
    wincmd H
    setl winfixheight winfixwidth
 
-   terminal 'cmatrix -a -b -C blue'
+   terminal cmatrix -a -b -C blue
    exe "54wincmd |"
 
    " FIXME: This isn't switching back into Normal mode????????????//??//NEHIdnswiarttoieas/nn?
