@@ -9,6 +9,7 @@ command! -nargs=0 CreatePortrait call CreatePortrait()
 function ResetPortrait()
    let l:win = bufwinnr('cmatrix')
    if -1 == l:win
+      echom "ResetPortrait: Portrait-window not found, re-creating"
       call CreatePortrait()
    endif
 
